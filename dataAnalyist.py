@@ -1,6 +1,7 @@
 import pandas as pd
 import boto3
 
+
 class analyzeData():
     def getData():
         id = 0

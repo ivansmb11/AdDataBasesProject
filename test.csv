@@ -1,0 +1,4 @@
+id,name,edad,genero,casado,dependientes,ingresoM,ingresoCoaplicante,historial,tipoPropiedad,monto_req,debt_to_income_ratio,risk_score,employment_length
+1,IVAN MENDOZA,20,Hombre,TRUE,0,5000,,FALSE,Urbana,5000,300/5000,,0
+2,,,,,,,,,,,,,
+3,,,,,,,,,,,,,
