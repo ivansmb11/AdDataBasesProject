@@ -5,7 +5,9 @@ Advanced Databases project consisted in creating a Credit App unsing an AWS Infr
 ## Folder Structure
 
 - `AdDataBasesProjectREST`: REST API in Node.js
+- `docs`: Static files
 - `Py`: Data Analysis Python Scripts
+- `REQs`: Technical Requirements
 
 ## Architecture
 
