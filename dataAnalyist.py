@@ -4,6 +4,10 @@ import boto3
 
 class analyzeData():
     def getData():
+        data = []
+
+        
+        
         id = 0
         name = ""
         edad = 0
