@@ -1,0 +1,14 @@
+id int
+name string
+edad int
+genero string
+casado boolean
+dependientes int
+ingresoM Double
+ingresoCoaplicante Double
+historial boolean
+tipoPropiedad string
+monto_req Double
+debt_to_income_ratio Double
+risk_score Double
+employment_length Double
