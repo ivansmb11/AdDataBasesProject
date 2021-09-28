@@ -9,4 +9,4 @@ Advanced Databases project consisted in creating a Credit App unsing an AWS Infr
 
 ## Architecture
 
-![UML Class Diagram](./docs/AdDataBasesProject_Architecture.png)
+![AdDataBasesProject_Architecture](./docs/AdDataBasesProject_Architecture.png)
