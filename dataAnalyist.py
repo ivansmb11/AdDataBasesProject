@@ -1,13 +1,14 @@
 import pandas as pd
 import boto3
 
-
+class connection():
+    client = boto3.client('s3')
+    client.create_bucket(Bucket = 'boto3')
+    
 class analyzeData():
     def getData():
         data = []
 
-        
-        
         id = 0
         name = ""
         edad = 0
@@ -23,4 +24,6 @@ class analyzeData():
         risk_score = 0.0 #cartera de préstamos con 30 días de vencimiento o más / Total loan portfolio
         employment_length = 0.0
 
-        
+    def algorithmDev():
+
+
