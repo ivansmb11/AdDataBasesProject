@@ -1,15 +1,15 @@
 <template>
-  <form>
+  <form @submit.prevent="onSubmit">
     <!-- Email input -->
     <div class="form-outline mb-4">
-      <input type="email" id="form3Example3" class="form-control form-control-lg"
+      <input v-model="userForm.email" type="email" id="form3Example3" class="form-control form-control-lg"
         placeholder="Enter a valid email address" />
       <label class="form-label" for="form3Example3">Email address</label>
     </div>
 
     <!-- Password input -->
     <div class="form-outline mb-3">
-      <input type="password" id="form3Example4" class="form-control form-control-lg"
+      <input v-model="userForm.password" type="password" id="form3Example4" class="form-control form-control-lg"
         placeholder="Enter password" />
       <label class="form-label" for="form3Example4">Password</label>
     </div>
@@ -26,7 +26,7 @@
     </div>
 
     <div class="text-center text-lg-start mt-4 pt-2">
-      <button type="button" class="btn btn-primary btn-lg"
+      <button type="submit" class="btn btn-primary btn-lg"
         style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
         <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account?
           <router-link :to="{ name: 'register' }">
@@ -38,7 +38,24 @@
 </template>
 
 <script>
+
+import { ref } from 'vue'
+
 export default {
+
+  setup() {
+    const userForm = ref({
+      email: '',
+      password: ''
+    })
+
+    return {
+      userForm,
+      onSubmit: async() => {
+        console.log(userForm.value);
+      }
+    }
+  }
 
 }
 </script>
