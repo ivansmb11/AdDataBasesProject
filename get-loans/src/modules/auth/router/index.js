@@ -11,7 +11,7 @@ export default {
         {
             path: '/register',
             name: 'register',
-            component: () => import(/* webpackChunkName: "Login" */ '../views/Register')
+            component: () => import(/* webpackChunkName: "Register" */ '../views/Register')
         }
     ]
 }
