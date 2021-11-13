@@ -5,7 +5,7 @@ const { generateJWT } = require('../helpers/jwt');
 
 const createUser = async(req = request, res = response) => {
     
-    const { email, name, password } = req.body;
+    const { name, lastName, email, password } = req.body;
 
     try {        
         // Verify email
@@ -34,6 +34,7 @@ const createUser = async(req = request, res = response) => {
         return res.status(201).json({
             uid: dbUser.id,
             name,
+            lastName,
             email,
             token
         });
@@ -72,6 +73,7 @@ const loginUser = async(req = request, res = respose) => {
         return res.json({
             uid: dbUser.id,
             name: dbUser.name,
+            lastName: dbUser.lastName,
             token
         });
 
@@ -85,7 +87,7 @@ const loginUser = async(req = request, res = respose) => {
 
 }
 
-const renewToken = async( req = request, res = response) => {
+const renewToken = async( req = request, res = response ) => {
 
     const { uid, name } = req;
 
