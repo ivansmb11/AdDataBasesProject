@@ -1,7 +1,7 @@
 const { request, response, json } = require('express');
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
-// const { generateJWT } = require('../helpers/jwt');
+const { generateJWT } = require('../helpers/jwt');
 
 const createUser = async(req = request, res = response) => {
     
@@ -9,13 +9,13 @@ const createUser = async(req = request, res = response) => {
 
     try {        
         // Verify email
-        // const user = await User.findOne({ email });
+        const user = await User.findOne({ email });
 
-        // if ( user ) {
-        //     return res.status(400).json({
-        //         msg: 'Already existing email'
-        //     });
-        // }
+        if ( user ) {
+            return res.status(400).json({
+                msg: 'Already existing email'
+            });
+        }
 
         // Create user model
         const dbUser = new User( req.body );
@@ -25,10 +25,10 @@ const createUser = async(req = request, res = response) => {
         dbUser.password = bcrypt.hashSync( password, salt );
 
         // Generate JWT
-        // const token = await generateJWT( dbUser.id, name );
+        const token = await generateJWT( dbUser.id, name );
 
         // Create DB user
-        // await dbUser.save();
+        await dbUser.save();
 
         // Generate successful response
         return res.status(201).json({
@@ -51,33 +51,28 @@ const loginUser = async(req = request, res = respose) => {
 
     try {
         
-        // const dbUser = await User.findOne({ email });
+        const dbUser = await User.findOne({ email });
 
-        // if ( !dbUser ) {
-        //     return res.status(400).json({
-        //         msg: 'Invalid email or password'
-        //     });
-        // }
+        if ( !dbUser ) {
+            return res.status(400).json({
+                msg: 'Invalid email or password'
+            });
+        }
 
-        // const validPassword = bcrypt.compareSync( password, dbUser.password );
+        const validPassword = bcrypt.compareSync( password, dbUser.password );
 
-        // if ( !validPassword ) {
-        //     return res.status(400).json({
-        //         msg: 'Invalid email or password'
-        //     });
-        // }
+        if ( !validPassword ) {
+            return res.status(400).json({
+                msg: 'Invalid email or password'
+            });
+        }
 
-        // const token = await generateJWT( dbUser.id, dbUser.name );
-
-        // return res.json({
-        //     uid: dbUser.id,
-        //     name: dbUser.name,
-        //     token
-        // });
+        const token = await generateJWT( dbUser.id, dbUser.name );
 
         return res.json({
-            email,
-            password
+            uid: dbUser.id,
+            name: dbUser.name,
+            token
         });
 
     } catch ( error ) {
@@ -90,22 +85,22 @@ const loginUser = async(req = request, res = respose) => {
 
 }
 
-// const renewToken = async( req = request, res = response) => {
+const renewToken = async( req = request, res = response) => {
 
-//     const { uid, name } = req;
+    const { uid, name } = req;
 
-//     const token = await generateJWT( uid, name );
+    const token = await generateJWT( uid, name );
 
-//     return res.json({
-//         uid,
-//         name,
-//         token
-//     });
+    return res.json({
+        uid,
+        name,
+        token
+    });
 
-// }
+}
 
 module.exports = {
     createUser,
     loginUser,
-    // renewToken
+    renewToken
 }
