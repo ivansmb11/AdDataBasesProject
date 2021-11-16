@@ -12,7 +12,7 @@ They saw this as an opportunity to sell this as a service that not only lets you
 
 - `docs`: Static files
 - `get-loans-rest`: REST API in Node.js
-- `get-loans-rest`: Web App in Vue.js
+- `get-loans`: Web App in Vue.js
 - `Py`: Data Analysis Python Scripts
 - `REQs`: Technical Requirements
 
