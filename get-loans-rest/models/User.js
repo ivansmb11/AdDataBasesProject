@@ -14,6 +14,17 @@ const UserSchema = Schema({
         required: true,
         unique: true
     },
+    age: {
+        type: Number
+    },
+    gender: {
+        type: String,
+        emun: ['Male', 'Female']
+    },
+    maritalStatus: {
+        type: String,
+        emun: ['Married', 'Widowed', 'Separated', 'Divorced', 'Single']
+    },
     password: {
         type: String,
         required: true
