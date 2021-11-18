@@ -49,7 +49,7 @@ const deleteUser = async ( req, res = response ) => {
 
 }
 
-export default {
+module.exports = {
     deleteUser,
     getUsers,
     updateUser

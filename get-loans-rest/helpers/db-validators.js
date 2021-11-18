@@ -1,4 +1,4 @@
-import User from '../models/User';
+const User = require('../models/User');
 
 const existEmail = async ( email = '' ) => {
     
@@ -20,7 +20,7 @@ const existUserById = async ( id = '' ) => {
 
 }
 
-export default {
+module.exports = {
     existEmail,
     existUserById
 }
