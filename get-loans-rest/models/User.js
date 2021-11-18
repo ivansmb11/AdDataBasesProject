@@ -18,6 +18,13 @@ const UserSchema = Schema({
         type: String,
         required: true
     },
+    img: {
+        type: String
+    },
+    active: {
+        type: Boolean,
+        default: true
+    }
 });
 
 module.exports = model( 'User', UserSchema );
