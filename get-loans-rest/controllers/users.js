@@ -1,5 +1,5 @@
-const { request, response } = require("express");
-const User = require("../models/User");
+const { request, response } = require('express');
+const User = require('../models/User');
 
 const getUsers = async( req = request, res = response ) => {
 
@@ -8,8 +8,8 @@ const getUsers = async( req = request, res = response ) => {
     const query = { active: true };
 
     const [ total, users ] = await Promise.all([
-        Usuario.countDocuments( query ),
-        Usuario.find( query )
+        User.countDocuments( query ),
+        User.find( query )
             .skip(Number( skip ))
             .limit(Number( limit ))
     ])
@@ -41,7 +41,7 @@ const deleteUser = async ( req, res = response ) => {
     
     const { id } = req.params;
 
-    const user = await Usuario.findByIdAndUpdate( id, { active: false } );
+    const user = await User.findByIdAndUpdate( id, { active: false } );
  
     res.json({
         user
