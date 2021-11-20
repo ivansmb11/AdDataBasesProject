@@ -27,7 +27,8 @@ const LoanSchema = Schema({
         default: 'Urban'
     },
     amountRequested: {
-        type: Number 
+        type: Number,
+        required: true
     },
     employmentYears: {
         type: Number,
