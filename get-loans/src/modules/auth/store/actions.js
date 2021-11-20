@@ -12,7 +12,7 @@ export const createUser = async({ commit }, user ) => {
         return { ok: true }
 
     } catch ( { response } ) {
-        return { msg: response.data.msg }
+        return { ok: false, msg: response.data.msg }
     }
 
 }
