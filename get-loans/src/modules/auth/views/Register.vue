@@ -49,16 +49,16 @@ export default {
     const { createUser } = useAuth()
 
     const userForm = ref({
+      email: '',
       name: '',
       lastName: '',
-      email: '',
       password: '',
     })
 
     return {
       userForm,
       onSubmit: async() => {
-        createUser( userForm )
+        createUser( userForm.value )
       }
     }
 
