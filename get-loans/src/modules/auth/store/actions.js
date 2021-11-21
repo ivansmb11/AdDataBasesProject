@@ -16,3 +16,21 @@ export const createUser = async({ commit }, user ) => {
     }
 
 }
+
+export const loginUser = async({ commit }, user ) => {
+    
+    const { email, password } = user
+
+    try {
+        const { data } = await authApi.post( '', { email, password } )
+        const { token } = data
+
+        commit( 'loginUser', { user, token } )
+
+        return { ok: true }
+
+    } catch ( { response } ) {
+        return { ok: false, msg: response.data.msg }
+    }
+
+}
