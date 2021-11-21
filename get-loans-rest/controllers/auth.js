@@ -72,6 +72,7 @@ const loginUser = async(req = request, res = respose) => {
 
         return res.json({
             uid: dbUser.id,
+            email: dbUser.email,
             name: dbUser.name,
             lastName: dbUser.lastName,
             token
