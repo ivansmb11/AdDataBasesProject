@@ -40,10 +40,17 @@
 <script>
 
 import { ref } from 'vue'
+// import { useRouter } from 'vue-router'
+import useAuth from '../composables/useAuth'
+import Swal from 'sweetalert2'
 
 export default {
 
   setup() {
+
+    // const router = useRouter()
+    const { loginUser } = useAuth()
+
     const userForm = ref({
       email: '',
       password: ''
@@ -52,7 +59,10 @@ export default {
     return {
       userForm,
       onSubmit: async() => {
-        console.log(userForm.value);
+        const { ok, msg } = await loginUser( userForm.value )
+        if ( !ok ) Swal.fire( 'Error', msg, 'error' )
+        // TODO: redirect to home
+        // else router.push({ name: '' })
       }
     }
   }

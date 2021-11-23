@@ -1,17 +1,30 @@
-// import { useStore } from 'vuex'
+import { useStore } from 'vuex'
+import { computed } from 'vue'
 
 const useAuth = () => {
     
-    // const store = useStore()
+    const store = useStore()
     
     const createUser = async( user ) => {
-        console.log( user );
-        // TODO: store.dispatch('auth/createUser', user )
-        // return resp
+        const resp = await store.dispatch( 'auth/createUser', user )
+        return resp
+    }
+
+    const loginUser = async( user ) => {
+        const resp = await store.dispatch( 'auth/loginUser', user )
+        return resp
+    }
+
+    const checkAuth = async() => {
+        const resp = await store.dispatch( 'auth/checkAuth' )
+        return resp
     }
 
     return {
-        createUser
+        createUser,
+        loginUser,
+        checkAuth,
+        authStatus: computed(()=>store.getters['auth/currentState'])
     }
 }
 
