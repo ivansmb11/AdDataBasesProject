@@ -28,9 +28,16 @@
     </div>
   </div>
 </nav>
-<div class="container">
-    <router-view/>
-</div>
+
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-8 col-lg-6 col-xl-8 offset-xl-1">
+        <router-view />
+      </div>
+    </div>
+  </div>
+</section>
 </template>
 
 <script>
