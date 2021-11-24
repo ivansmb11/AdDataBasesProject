@@ -1,22 +1,18 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Home from '../views/Home.vue'
 import authRouter from '../modules/auth/router'
 import loansRouter from '../modules/loans/router'
+import isAuthGuard from '../modules/auth/router/auth-guard'
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: '',
+    beforeEnter: [ isAuthGuard ],
+    ...loansRouter
   },
   {
     path: '/auth',
     ...authRouter
   },
-  {
-    path: '/loans',
-    ...loansRouter
-  }
 ]
 
 const router = createRouter({
