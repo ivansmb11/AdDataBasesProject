@@ -11,7 +11,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
             <router-link :to="{ name: 'getLoan' }">
-              <a class="nav-link active" aria-current="page" href="#">Get Loan</a>
+              <a class="nav-link" aria-current="page" href="#">Get Loan</a>
             </router-link>
         </li>
         <li class="nav-item">
@@ -24,7 +24,7 @@
   </div>
 </nav>
 <div class="container">
-    <router-view />
+    <router-view/>
 </div>
 </template>
 
@@ -35,5 +35,7 @@ export default {
 </script>
 
 <style>
-
+a {
+  text-decoration: none;
+}
 </style>
