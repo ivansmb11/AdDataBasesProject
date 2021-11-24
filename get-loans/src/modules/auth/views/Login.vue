@@ -62,7 +62,7 @@ export default {
         const { ok, msg } = await loginUser( userForm.value )
         if ( !ok ) Swal.fire( 'Error', msg, 'error' )
         // TODO: redirect to home
-        else router.push({ name: 'loans' })
+        else router.push({ name: 'getLoan' })
       }
     }
   }

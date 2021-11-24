@@ -12,6 +12,11 @@ export default {
             path: '/myLoans',
             name: 'myLoans',
             component: () => import(/* webpackChunkName: "My Loans" */ '../views/MyLoans')
+        },
+        {
+            path: '/myAccount',
+            name: 'myAccount',
+            component: () => import(/* webpackChunkName: "My Account" */ '../views/MyAccount')
         }
     ]
 }
