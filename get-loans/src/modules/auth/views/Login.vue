@@ -40,7 +40,7 @@
 <script>
 
 import { ref } from 'vue'
-// import { useRouter } from 'vue-router'
+import { useRouter } from 'vue-router'
 import useAuth from '../composables/useAuth'
 import Swal from 'sweetalert2'
 
@@ -48,7 +48,7 @@ export default {
 
   setup() {
 
-    // const router = useRouter()
+    const router = useRouter()
     const { loginUser } = useAuth()
 
     const userForm = ref({
@@ -62,7 +62,7 @@ export default {
         const { ok, msg } = await loginUser( userForm.value )
         if ( !ok ) Swal.fire( 'Error', msg, 'error' )
         // TODO: redirect to home
-        // else router.push({ name: '' })
+        else router.push({ name: 'getLoan' })
       }
     }
   }

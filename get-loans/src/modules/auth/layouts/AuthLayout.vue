@@ -1,8 +1,4 @@
 <template>
-  <!-- <div id="nav">
-    <router-link :to="{ name: 'login' }">Login</router-link> |
-    <router-link :to="{ name: 'register' }">Register</router-link>
-  </div> -->
   <section class="vh-100">
     <div class="container-fluid h-custom">
       <div class="row d-flex justify-content-center align-items-center h-100">
