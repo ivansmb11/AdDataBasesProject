@@ -1,4 +1,11 @@
 <template>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../../../assets/get-loans.png" alt="" width="140" class="d-inline-block align-text-top">
+      </a>
+    </div>
+  </nav>
   <section class="vh-100">
     <div class="container-fluid h-custom">
       <div class="row d-flex justify-content-center align-items-center h-100">
