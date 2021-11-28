@@ -147,16 +147,16 @@ export default {
       name: user.value.name,
       lastName: user.value.lastName,
       email: user.value.email,
-      age: '',
-      gender: '',
-      maritalStatus: '',
+      age: null,
+      gender: null,
+      maritalStatus: null,
       dependents: 0,
-      monthlyIncome: '',
-      coApplicantIncome: '',
+      monthlyIncome: null,
+      coApplicantIncome: null,
       history: 0,
       employmentYears: 0,
       propertyType: 'Urban',
-      amountRequested: ''
+      amountRequested: null
     })
 
     return {
@@ -181,7 +181,7 @@ export default {
             Swal.fire( 'Error', 'Something wrong :(', 'error' )
           }
           
-        } catch (error) {
+        } catch ( error ) {
           console.log( error.response.data.msg )
           Swal.fire( 'Error', error.response.data.msg, 'error' )
         }
