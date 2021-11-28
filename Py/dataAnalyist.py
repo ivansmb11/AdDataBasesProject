@@ -18,4 +18,5 @@ class analyzeData():
         risk_score = 0.0 #cartera de préstamos con 30 días de vencimiento o más / Total loan portfolio
         employment_length = 0
 
-        
+    def mainLoop():
+        pass
