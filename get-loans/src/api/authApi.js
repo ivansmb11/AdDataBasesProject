@@ -7,4 +7,4 @@ const authApi = axios.create({
     }
 })
 
-export default authApi;
+export default authApi

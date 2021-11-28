@@ -6,6 +6,30 @@ const LoanSchema = Schema({
         ref: 'User',
         required: true
     },
+    name: {
+        type: String,
+        required: true
+    },
+    lastName: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true
+    },
+    age: {
+        type: Number,
+        required: true
+    },
+    gender: {
+        type: String,
+        required: true
+    },
+    maritalStatus: {
+        type: String,
+        required: true
+    },
     dependents: {
         type: Number,
         default: 0
@@ -33,6 +57,11 @@ const LoanSchema = Schema({
     employmentYears: {
         type: Number,
         default: 0
+    },
+    status: {
+        type: String,
+        emun: ['Accepted', 'Pending', 'Declined'],
+        default: 'Pending'
     }
 });
 
