@@ -4,16 +4,16 @@
       <div class="col-6">
         <!-- Name input -->
         <div class="form-outline mb-4">
-          <input type="text" id="form3Example1" class="form-control form-control-lg"
-            placeholder="Enter name" />
+          <input v-model="loanForm.name" type="text" id="form3Example1" class="form-control form-control-lg"
+            placeholder="Enter name" required/>
           <label class="form-label" for="form3Example1">Name</label>
         </div>
       </div>
       <div class="col-6">
         <!-- Last name input -->
         <div class="form-outline mb-4">
-          <input type="text" id="form3Example2" class="form-control form-control-lg"
-            placeholder="Enter last name" />
+          <input v-model="loanForm.lastName" type="text" id="form3Example2" class="form-control form-control-lg"
+            placeholder="Enter last name" required/>
           <label class="form-label" for="form3Example2">Last name</label>
         </div>
       </div>
@@ -22,8 +22,8 @@
     <div class="row"> <!-- email row -->
       <!-- Email input -->
       <div class="form-outline mb-4">
-        <input type="email" id="form3Example3" class="form-control form-control-lg"
-          placeholder="Enter a valid email address" />
+        <input v-model="loanForm.email" type="email" id="form3Example3" class="form-control form-control-lg"
+          placeholder="Enter a valid email address" required/>
         <label class="form-label" for="form3Example3">Email address</label>
       </div>
     </div> <!-- end email row -->
@@ -32,16 +32,16 @@
       <div class="col-6">
         <!-- Age input -->
         <div class="form-outline mb-4">
-          <input type="number" id="form3Example4" class="form-control form-control-lg"
-            placeholder="Enter age" />
+          <input v-model="loanForm.age" type="number" id="form3Example4" class="form-control form-control-lg"
+            placeholder="Enter age" required/>
           <label class="form-label" for="form3Example4">Age</label>
         </div>
       </div>
       <div class="col-6">
         <!-- Gender input -->
         <div class="form-outline mb-4">
-          <input type="text" id="form3Example5" class="form-control form-control-lg"
-            placeholder="Enter gender" />
+          <input v-model="loanForm.gender" type="text" id="form3Example5" class="form-control form-control-lg"
+            placeholder="Enter gender" required/>
           <label class="form-label" for="form3Example5">Gender</label>
         </div>
       </div>
@@ -50,8 +50,8 @@
     <div class="row"> <!-- marital status row -->
       <!-- marital status input -->
       <div class="form-outline mb-4">
-        <input type="text" id="form3Example6" class="form-control form-control-lg"
-          placeholder="Enter marital status" />
+        <input v-model="loanForm.maritalStatus" type="text" id="form3Example6" class="form-control form-control-lg"
+          placeholder="Enter marital status" required/>
         <label class="form-label" for="form3Example6">Marital Status</label>
       </div>
     </div> <!-- end marital status row -->
@@ -59,8 +59,8 @@
     <div class="row"> <!-- dependents row -->
       <!-- dependents input -->
       <div class="form-outline mb-4">
-        <input type="number" id="form3Example7" class="form-control form-control-lg"
-          placeholder="Enter dependents" />
+        <input v-model="loanForm.dependents" type="number" id="form3Example7" class="form-control form-control-lg"
+          placeholder="Enter dependents"/>
         <label class="form-label" for="form3Example7">Dependents</label>
       </div>
     </div> <!-- end dependents row -->
@@ -69,16 +69,16 @@
       <div class="col-6">
         <!-- Montly Income input -->
         <div class="form-outline mb-4">
-          <input type="number" id="form3Example8" class="form-control form-control-lg"
-            placeholder="Enter Montly Income" />
-          <label class="form-label" for="form3Example8">Montly Income</label>
+          <input v-model="loanForm.monthlyIncome" type="number" id="form3Example8" class="form-control form-control-lg"
+            placeholder="Enter Montly Income" required/>
+          <label class="form-label" for="form3Example8">Monthly Income</label>
         </div>
       </div>
       <div class="col-6">
         <!-- Co-applicant Income input -->
         <div class="form-outline mb-4">
-          <input type="number" id="form3Example9" class="form-control form-control-lg"
-            placeholder="Enter Co-Applicant Income" />
+          <input v-model="loanForm.coApplicantIncome" type="number" id="form3Example9" class="form-control form-control-lg"
+            placeholder="Enter Co-Applicant Income"/>
           <label class="form-label" for="form3Example9">Co-Applicant Income</label>
         </div>
       </div>
@@ -88,16 +88,16 @@
       <div class="col-6">
         <!-- History input -->
         <div class="form-outline mb-4">
-          <input type="number" id="form3Example10" class="form-control form-control-lg"
-            placeholder="Enter History" />
+          <input v-model="loanForm.history" type="number" id="form3Example10" class="form-control form-control-lg"
+            placeholder="Enter History"/>
           <label class="form-label" for="form3Example10">History</label>
         </div>
       </div>
       <div class="col-6">
         <!-- Employment Years input -->
         <div class="form-outline mb-4">
-          <input type="number" id="form3Example11" class="form-control form-control-lg"
-            placeholder="Enter Employment Years" />
+          <input v-model="loanForm.employmentYears" type="number" id="form3Example11" class="form-control form-control-lg"
+            placeholder="Enter Employment Years"/>
           <label class="form-label" for="form3Example11">Employment Years</label>
         </div>
       </div>
@@ -106,8 +106,8 @@
     <div class="row"> <!-- Property type row -->
       <!-- Property type input -->
       <div class="form-outline mb-4">
-        <input type="text" id="form3Example12" class="form-control form-control-lg"
-          placeholder="Enter Property Type" />
+        <input v-model="loanForm.propertyType" type="text" id="form3Example12" class="form-control form-control-lg"
+          placeholder="Enter Property Type"/>
         <label class="form-label" for="form3Example12">Property Type</label>
       </div>
     </div> <!-- end Property type row -->
@@ -115,8 +115,8 @@
     <div class="row"> <!-- Amount Requested row -->
       <!-- Amount Requested input -->
       <div class="form-outline mb-4">
-        <input type="number" id="form3Example12" class="form-control form-control-lg"
-          placeholder="Enter Amount Requested" />
+        <input v-model="loanForm.amountRequested" type="number" id="form3Example12" class="form-control form-control-lg"
+          placeholder="Enter Amount Requested" required/>
         <label class="form-label" for="form3Example12">Amount Requested</label>
       </div>
     </div> <!-- end Amount Requested row -->
@@ -127,3 +127,67 @@
     </div><br><br>
   </form>
 </template>
+
+<script>
+
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import loansApi from '../../../api/loansApi'
+import useAuth from '../../auth/composables/useAuth'
+import Swal from 'sweetalert2'
+
+export default {
+
+  setup() {
+    
+    const router = useRouter()
+    const { user } = useAuth()
+
+    const loanForm = ref({
+      name: user.value.name,
+      lastName: user.value.lastName,
+      email: user.value.email,
+      age: '',
+      gender: '',
+      maritalStatus: '',
+      dependents: 0,
+      monthlyIncome: '',
+      coApplicantIncome: '',
+      history: 0,
+      employmentYears: 0,
+      propertyType: 'Urban',
+      amountRequested: ''
+    })
+
+    return {
+      loanForm,
+      user,
+      onSubmit: async() => {
+        // TODO: Create loan
+        const token = localStorage.getItem('token')
+
+        try {
+          const { status } = await loansApi.post( '', loanForm.value, {
+              headers: {
+                'x-token': token
+              }
+          })
+          
+          if ( status === 201 ) {
+            Swal.fire( 'Sucess', 'Loan requested!', 'success' ).then( ()=> {
+              router.push({ name: 'myLoans' })
+            })
+          } else {
+            Swal.fire( 'Error', 'Something wrong :(', 'error' )
+          }
+          
+        } catch (error) {
+          console.log( error.response.data.msg )
+          Swal.fire( 'Error', error.response.data.msg, 'error' )
+        }
+      }
+    }
+
+  }  
+}
+</script>
