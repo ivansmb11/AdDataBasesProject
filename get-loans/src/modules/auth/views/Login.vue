@@ -13,22 +13,10 @@
         placeholder="Enter password" />
       <label class="form-label" for="form3Example4">Password</label>
     </div>
-
-    <div class="d-flex justify-content-between align-items-center">
-      <!-- Checkbox -->
-      <div class="form-check mb-0">
-        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
-        <label class="form-check-label" for="form2Example3">
-          Remember me
-        </label>
-      </div>
-      <a href="#!" class="text-body">Forgot password?</a>
-    </div>
-
     <div class="text-center text-lg-start mt-4 pt-2">
       <button type="submit" class="btn btn-primary btn-lg"
         style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
-        <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account?
+        <p class="small fw-bold mt-4 pt-1 mb-0">Don't have an account?
           <router-link :to="{ name: 'register' }">
             <a href="#!" class="link-danger">Register</a>
           </router-link>
@@ -40,10 +28,17 @@
 <script>
 
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import useAuth from '../composables/useAuth'
+import Swal from 'sweetalert2'
 
 export default {
 
   setup() {
+
+    const router = useRouter()
+    const { loginUser } = useAuth()
+
     const userForm = ref({
       email: '',
       password: ''
@@ -52,7 +47,10 @@ export default {
     return {
       userForm,
       onSubmit: async() => {
-        console.log(userForm.value);
+        const { ok, msg } = await loginUser( userForm.value )
+        if ( !ok ) Swal.fire( 'Error', msg, 'error' )
+        // TODO: redirect to home
+        else router.push({ name: 'getLoan' })
       }
     }
   }

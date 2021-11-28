@@ -1,10 +1,20 @@
 <template>
-  <!-- <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div> -->
   <router-view/>
 </template>
+
+<script>
+import useAuth from './modules/auth/composables/useAuth'
+export default {
+  setup() {
+    const { authStatus, checkAuth } = useAuth()
+    checkAuth()
+    return {
+      authStatus 
+    }
+
+  }
+}
+</script>
 
 <style>
 #app {

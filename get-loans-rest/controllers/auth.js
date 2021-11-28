@@ -72,6 +72,7 @@ const loginUser = async(req = request, res = respose) => {
 
         return res.json({
             uid: dbUser.id,
+            email: dbUser.email,
             name: dbUser.name,
             lastName: dbUser.lastName,
             token
@@ -93,9 +94,15 @@ const renewToken = async( req = request, res = response ) => {
 
     const token = await generateJWT( uid, name );
 
+    const user = await User.findById( uid );
+
+    const { email, lastName } = user;
+
     return res.json({
         uid,
+        email,
         name,
+        lastName,
         token
     });
 

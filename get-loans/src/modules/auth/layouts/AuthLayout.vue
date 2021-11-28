@@ -1,8 +1,11 @@
 <template>
-  <!-- <div id="nav">
-    <router-link :to="{ name: 'login' }">Login</router-link> |
-    <router-link :to="{ name: 'register' }">Register</router-link>
-  </div> -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../../../assets/get-loans.png" alt="" width="140" class="d-inline-block align-text-top">
+      </a>
+    </div>
+  </nav>
   <section class="vh-100">
     <div class="container-fluid h-custom">
       <div class="row d-flex justify-content-center align-items-center h-100">
