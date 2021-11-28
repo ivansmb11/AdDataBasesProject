@@ -1,9 +1,9 @@
 <template>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
         <div class="container-fluid">
             <router-link :to="{ name: 'getLoan' }">
                 <a class="navbar-brand" href="#">
-                    <img src="../../../assets/get-loans.png" alt="" width="140" class="d-inline-block align-text-top">
+                    <img src="@/assets/get-loans.png" alt="" width="140" class="d-inline-block align-text-top">
                 </a>
             </router-link>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
