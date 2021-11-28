@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const { check } = require('express-validator');
-const { createLoan } = require('../controllers/loans');
+const { createLoan, getLoans } = require('../controllers/loans');
 
 const { validateFields } = require('../middlewares/validate-fields');
 const { validateJWT } = require('../middlewares/validate-jwt');
@@ -12,5 +12,9 @@ router.post( '/', [
     validateJWT,
     validateFields
 ], createLoan );
+
+router.get( '/', [
+    validateJWT
+], getLoans );
 
 module.exports = router;
