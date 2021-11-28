@@ -38,21 +38,28 @@
         </div>
       </div>
       <div class="col-6">
-        <!-- Gender input -->
-        <div class="form-outline mb-4">
-          <input v-model="loanForm.gender" type="text" id="form3Example5" class="form-control form-control-lg"
-            placeholder="Enter gender" required/>
-          <label class="form-label" for="form3Example5">Gender</label>
-        </div>
+        <select v-model="loanForm.gender" id="gender" class="form-select form-select-lg" required>
+          <option disabled selected>Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+        <label class="form-label" for="gender">Gender</label>
       </div>
     </div> <!-- end age & gender row -->
 
     <div class="row"> <!-- marital status row -->
       <!-- marital status input -->
       <div class="form-outline mb-4">
-        <input v-model="loanForm.maritalStatus" type="text" id="form3Example6" class="form-control form-control-lg"
-          placeholder="Enter marital status" required/>
-        <label class="form-label" for="form3Example6">Marital Status</label>
+        <select v-model="loanForm.maritalStatus" id="maritalStatus" class="form-select form-select-lg" required>
+          <option disabled selected>Marital Status</option>
+          <option value="Single" selected>Single</option>
+          <option value="Married">Married</option>
+          <option value="Widowed">Widowed</option>
+          <option value="Divorced">Divorced</option>
+          <option value="Separated">Separated</option>
+          <option value="Partnership">Partnership</option>
+        </select>
+        <label class="form-label" for="maritalStatus">Marital Status</label>
       </div>
     </div> <!-- end marital status row -->
     
@@ -148,8 +155,8 @@ export default {
       lastName: user.value.lastName,
       email: user.value.email,
       age: null,
-      gender: null,
-      maritalStatus: null,
+      gender: 'Gender',
+      maritalStatus: 'Marital Status',
       dependents: 0,
       monthlyIncome: null,
       coApplicantIncome: null,
