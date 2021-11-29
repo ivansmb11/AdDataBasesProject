@@ -1,4 +1,7 @@
 from pymongo import MongoClient
+import datetime
+from datetime import timedelta
+import pprint
 
 client = MongoClient('mongodb+srv://admin:9nueC61OFkcpebOv@mycluster.hb5cg.mongodb.net/get-loans')
 

@@ -1,5 +1,11 @@
+from pymongo import *
 
 class analyzeData():
+
+    client = MongoClient('mongodb+srv://admin:9nueC61OFkcpebOv@mycluster.hb5cg.mongodb.net/get-loans')
+    mydb = client["get-loans"]
+    collection = 
+
 
     status = "pending"
 
