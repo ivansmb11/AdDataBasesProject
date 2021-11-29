@@ -10,6 +10,17 @@
         </li>
     </ul>
 
+    <div v-if="loans.length===0 && !isLoading">
+      <h4>No loans requested yet</h4>
+      <h5>Go to
+        <router-link :to="{ name: 'getLoan' }">
+          <a href="#">
+            Get Loan!    
+          </a>
+        </router-link>
+         to request your first loan</h5>
+    </div>
+
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
