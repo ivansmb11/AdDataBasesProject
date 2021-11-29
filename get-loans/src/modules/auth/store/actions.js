@@ -1,4 +1,4 @@
-import authApi from '@/api/authApi';
+import authApi from '@/api/authApi'
 
 export const createUser = async({ commit }, user ) => {
     
@@ -30,7 +30,7 @@ export const loginUser = async({ commit }, user ) => {
         delete data.uid
         delete data.token
 
-        const user = {...data}
+        const user = { ...data }
 
         commit( 'loginUser', { user, token } )
 
