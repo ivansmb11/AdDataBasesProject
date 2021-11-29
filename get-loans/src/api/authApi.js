@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const authApi = axios.create({
-    baseURL: 'http://localhost:8081/api/v1/auth',
+    baseURL: 'http://node-express-env.eba-um6sxmyi.us-east-2.elasticbeanstalk.com/api/v1/auth',
     headers: {
         "Access-Control-Allow-Origin": "*"
     }
