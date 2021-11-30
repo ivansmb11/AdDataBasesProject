@@ -1,4 +1,3 @@
-
 export default {
     name: 'loans',
     component: () => import(/* webpackChunkName: "Loans Layout" */ '../layouts/LoansLayout.vue'),
