@@ -52,7 +52,7 @@ export default {
         } else {
           const { ok, msg } = await loginUser( userForm.value )
           if ( !ok ) Swal.fire( 'Error', msg, 'error' )
-          else router.push({ name: 'getLoan' })
+          else router.push({ name: 'Home' })
         }
       }
     }
