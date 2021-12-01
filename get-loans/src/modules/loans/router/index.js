@@ -8,6 +8,11 @@ export default {
             component: () => import(/* webpackChunkName: "Get Loan" */ '../views/GetLoan')
         },
         {
+            path: '/Home',
+            name: 'Home',
+            component: () => import(/* webpackChunkName: "My Loans" */ '../views/Home')
+        },
+        {
             path: '/myLoans',
             name: 'myLoans',
             component: () => import(/* webpackChunkName: "My Loans" */ '../views/MyLoans')
