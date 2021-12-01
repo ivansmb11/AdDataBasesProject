@@ -6,7 +6,9 @@
                 <div class="fw-bold text-start">{{ loan._id }}</div>
                 Requested by {{ loan.name + ' ' + loan.lastName }}
             </div>
-            <span class="badge bg-primary rounded-pill">{{ loan.status }}</span>
+            <span v-if="loan.status==='Pending'" class="badge bg-warning rounded-pill">{{ loan.status }}</span>
+            <span v-if="loan.status==='Accepted'" class="badge bg-success rounded-pill">{{ loan.status }}</span>
+            <span v-if="loan.status==='Declined'" class="badge bg-danger rounded-pill">{{ loan.status }}</span>
         </li>
     </ul>
 
