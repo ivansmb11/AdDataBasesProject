@@ -1,6 +1,6 @@
 <template>
   <div class="mt-4">
-    <h1>Get Loan!</h1>
+    <h1>Get Loan</h1>
   </div>
   <div class="container-fluid h-custom mt-4">
     <div class="row d-flex justify-content-center h-100">

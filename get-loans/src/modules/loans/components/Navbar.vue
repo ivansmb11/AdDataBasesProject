@@ -18,7 +18,7 @@
                     </li>
                     <li class="nav-item">
                         <router-link :to="{ name: 'getLoan' }">
-                            <a class="nav-link" href="#">Get Loan!</a>
+                            <a class="nav-link" href="#">Get Loan</a>
                         </router-link>
                     </li>
                     <li class="nav-item">
