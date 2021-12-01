@@ -99,12 +99,21 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+        <h2 class="featurette-heading">Mission, Vision, <span class="text-muted">Values</span></h2>
+          <p class="lead">
+            We are a company that provides its technological and financial services for small and medium-sized
+            companies that have credit services, without the need for them to manage them.
+          </p>
+          <p class="lead">
+            We want to become a financial standard and be recognized as a great financial help for our customers,
+            and be positioned as a high valued enterprise for implementing a high performance financial system.
+          </p>
+          <p class="lead">
+            Responsibility, Transparency, Honesty
+          </p>
       </div>
       <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
+        <img src="../../../assets/get-loans-05.png" alt="" width="500">
       </div>
     </div>
 
