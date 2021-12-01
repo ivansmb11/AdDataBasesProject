@@ -15,7 +15,7 @@ def dataAnalyist(mI,cAI,aR,id):
         returnNode(status,id)
         print(id)
     else:
-        status = "Rejected"
+        status = "Declined"
         print(status)
         returnNode(status,id)
         print(id)
