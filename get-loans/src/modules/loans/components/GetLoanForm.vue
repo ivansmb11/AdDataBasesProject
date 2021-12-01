@@ -189,7 +189,7 @@ export default {
           }
           
         } catch ( error ) {
-          console.log( error.response.data.msg )
+          ( error.response.data.msg )
           Swal.fire( 'Error', error.response.data.msg, 'error' )
         }
       }

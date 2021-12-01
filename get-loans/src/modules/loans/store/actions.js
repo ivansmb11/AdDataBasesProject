@@ -11,9 +11,6 @@ export const loadLoans = async({ commit }) => {
 			}
 		})
 	
-		console.log( data.loans )
-	
-		// TODO: Commit mutation
 		commit( 'setLoans', data.loans )
 	
 		return { ok: true }

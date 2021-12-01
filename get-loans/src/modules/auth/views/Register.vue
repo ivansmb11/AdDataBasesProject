@@ -3,25 +3,25 @@
     <!-- Name input -->
     <div class="form-outline mb-4">
       <input v-model="userForm.name" type="text" id="form3Example1" class="form-control form-control-lg"
-        placeholder="Enter name" />
+        placeholder="Enter name" required/>
       <label class="form-label" for="form3Example1">Name</label>
     </div>
     <!-- Last name input -->
     <div class="form-outline mb-4">
       <input v-model="userForm.lastName" type="text" id="form3Example2" class="form-control form-control-lg"
-        placeholder="Enter last name" />
+        placeholder="Enter last name" required/>
       <label class="form-label" for="form3Example2">Last name</label>
     </div>
     <!-- Email input -->
     <div class="form-outline mb-4">
       <input v-model="userForm.email" type="email" id="form3Example3" class="form-control form-control-lg"
-        placeholder="Enter a valid email address" />
+        placeholder="Enter a valid email address" required/>
       <label class="form-label" for="form3Example3">Email address</label>
     </div>
     <!-- Password input -->
     <div class="form-outline mb-3">
       <input v-model="userForm.password" type="password" id="form3Example4" class="form-control form-control-lg"
-        placeholder="Enter password" />
+        placeholder="Enter password" required/>
       <label class="form-label" for="form3Example4">Password</label>
     </div>
 
@@ -61,10 +61,13 @@ export default {
     return {
       userForm,
       onSubmit: async() => {
-        const { ok, msg } = await createUser( userForm.value )
-        if ( !ok ) Swal.fire( 'Error', msg, 'error' )
-        // TODO: redirect to home
-        else router.push({ name: 'getLoan' })
+        if( userForm.value.password.length < 6 ) {
+          Swal.fire( 'Error', 'Password must be 6 characters minimum', 'error' )
+        } else {
+          const { ok, msg } = await createUser( userForm.value )
+          if ( !ok ) Swal.fire( 'Error', msg, 'error' )
+          else router.push({ name: 'getLoan' })
+        }
       }
     }
 

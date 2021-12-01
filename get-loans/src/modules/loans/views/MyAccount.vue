@@ -17,22 +17,22 @@
                 <div class="row mt-2">
                     <div class="col-md-6">
                       <label class="labels">Name</label>
-                      <input type="text" class="form-control" placeholder="Enter name" :value="user.name">
+                      <input type="text" class="form-control" placeholder="Enter name" :value="user.name" disabled>
                     </div>
                     <div class="col-md-6">
                       <label class="labels">Last name</label>
-                      <input type="text" class="form-control" :value="user.lastName" placeholder="Enter last name">
+                      <input type="text" class="form-control" :value="user.lastName" placeholder="Enter last name" disabled>
                     </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-12">
                       <label class="labels">Email</label>
-                      <input type="email" class="form-control" placeholder="Enter email" :value="user.email">
+                      <input type="email" class="form-control" placeholder="Enter email" :value="user.email" disabled>
                     </div>
                 </div>
-                <div class="mt-5 text-right">
+                <!-- <div class="mt-5 text-right">
                   <button class="btn btn-primary profile-button" type="button">Update</button>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
