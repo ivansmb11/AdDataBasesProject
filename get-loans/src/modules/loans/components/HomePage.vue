@@ -12,7 +12,7 @@
         <div class="container">
           <div class="carousel-caption text-start">
             <h1>Get Loans</h1>
-            <p>Advanced Databases project consisted in creating a solution unsing an AWS Infraestructure and NoSQL Databases</p>
+            <p>Advanced Databases project consisted in creating a solution using an AWS Infraestructure and NoSQL Databases</p>
             <p><a class="btn btn-lg btn-primary" href="#">Get Loan!</a></p>
           </div>
         </div>
