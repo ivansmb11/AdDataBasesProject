@@ -38,7 +38,7 @@ def mainloop():
         amountRequested = x["amountRequested"]
 
         dataAnalyist(monthlyIncome, coApplicantIncome, amountRequested,id)
-        time.sleep(2)
+        time.sleep(0.5)
     except TypeError:
         print("Out of pending requests.")
         print("Finished Run. Number of iterations: {}.".format(countperrun))
