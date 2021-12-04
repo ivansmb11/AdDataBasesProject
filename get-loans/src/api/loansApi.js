@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const loansApi = axios.create({
-    baseURL: 'http://localhost:8081/api/v1/loans',
+    baseURL: 'http://node-express-env.eba-um6sxmyi.us-east-2.elasticbeanstalk.com/api/v1/loans',
     headers: {
         "Access-Control-Allow-Origin": "*"
     }

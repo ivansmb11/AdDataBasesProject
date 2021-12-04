@@ -1,6 +1,6 @@
 # AdDataBasesProject
 
-Advanced Databases project consisted in creating a solution unsing an AWS Infraestructure and NoSQL Databases.
+Advanced Databases project consisted in creating a solution using an AWS Infraestructure and NoSQL Databases.
 
 ## Get Loans
 

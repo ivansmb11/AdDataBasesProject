@@ -1,4 +1,3 @@
-
 export default {
     name: 'loans',
     component: () => import(/* webpackChunkName: "Loans Layout" */ '../layouts/LoansLayout.vue'),
@@ -7,6 +6,11 @@ export default {
             path: '',
             name: 'getLoan',
             component: () => import(/* webpackChunkName: "Get Loan" */ '../views/GetLoan')
+        },
+        {
+            path: '/Home',
+            name: 'Home',
+            component: () => import(/* webpackChunkName: "My Loans" */ '../views/Home')
         },
         {
             path: '/myLoans',
